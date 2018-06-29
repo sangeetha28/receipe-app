@@ -9,6 +9,10 @@ export const updateLikeButton = status => {
 }
 
 
+export const toggleLikeMenu = likes => {
+
+}
+
 
 export const renderFavourites = (receipe) => {
  console.log('Rendering favourites');

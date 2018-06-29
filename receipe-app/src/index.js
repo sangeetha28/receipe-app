@@ -113,14 +113,20 @@ if(e.target.matches('.btn-tiny--remove, .btn-tiny--remove *'))
 }
 });
 
-
-
 // elements.headerLikes.addEventListener('click', e => {
 //    likesview.renderFavourites(state.likes)
 // });
 
 // adding event listener for each for the change
 ['hashchange','load'].forEach(event => window.addEventListener(event,recipeController));
+
+window.addEventListener('load', e=> {
+    state.likes = new likes();
+    state.likes.readLocalStorage();
+    state.likes.likes.forEach(e => likesview.renderFavourites(e));
+});
+
+
 
 elements.receipeContainer.addEventListener('click', e => {
    if(e.target.matches('.btn-decrease,.btn-decrease *')) {

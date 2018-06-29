@@ -14,9 +14,7 @@ export const renderItems = (item) => {
                 </button>
             </li>`;
     elements.shoppinglist.insertAdjacentHTML("beforeend",markup);
-
 }
-
 
 export const deleteItem = id => {
     const item = document.querySelector(`[data-itemid="${id}"]`);
